@@ -10,8 +10,12 @@ const Footer = () => {
           <img src={face} className="w-full" />
         </div>
         <div className="ml-2 w-full">
-          <p className="text-blackText text-sm font-semibold md:max-w-[90%] whitespace-nowrap overflow-hidden overflow-ellipsis">Olivia Rhye</p>
-          <p className="text-greyText text-sm md:max-w-[70%] whitespace-nowrap overflow-hidden overflow-ellipsis">olivia@untitledui.com</p>
+          <p className="text-blackText text-sm font-semibold md:max-w-[90%] whitespace-nowrap overflow-hidden overflow-ellipsis">
+            Olivia Rhye
+          </p>
+          <p className="text-greyText text-sm md:max-w-[95%] whitespace-nowrap overflow-hidden overflow-ellipsis">
+            olivia@untitledui.com
+          </p>
         </div>
       </div>
       <div>

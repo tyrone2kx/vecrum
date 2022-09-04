@@ -13,30 +13,26 @@ interface IProps {
 }
 
 const Sidemenu = ({ toggleMenu, isOpen }: IProps) => {
-  const height = isOpen ? "h-screen " : "h-0";
-  const isMobile = useIsMobile();
+  const { isMobile, height: wHeight } = useIsMobile();
+  const height = isOpen ? `${wHeight}px` : "0px";
 
   return (
     <>
       <div
-        style={{ transition: "0.5s" }}
-        className={`${height} scrollbar-hide md:h-full overflow-y-auto  w-full  md:w-1/4 lg:w-1/5 xl:w-1/4 bg-white`}
+        style={{ transition: "0.3s", height: isMobile ? height : "100%" }}
+        className={` scrollbar-hide md:h-full overflow-y-scroll w-full  md:w-1/4 lg:w-1/5 xl:w-1/4 bg-white`}
       >
-        <div
-          id="menu-container"
-          className={`mt-8 md:mt-0 w-full  p-3 px-2`}
-        >
+        <div id="menu-container" className={`mt-12 md:mt-0 w-full  p-3 px-2`}>
           {!isMobile && <Header toggleMenu={toggleMenu} />}
           <SearchBar />
           <MenuBody />
           <News />
-        </div>
-        <div
-          id="menu-container"
-          className={` w-full  px-2 pb-3`}
-        >
-        <Spacer className="my-6" />
-          <Footer />
+          <div
+          // className={` w-full  px-2 pb-3`}
+          >
+            <Spacer className="my-6" />
+            <Footer />
+          </div>
         </div>
       </div>
     </>
