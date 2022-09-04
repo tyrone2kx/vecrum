@@ -79,6 +79,7 @@ const SettingsScreen = () => {
                             my="my-2"
                             bg="bg-white"
                             placeholder="Enter email"
+                            // type="email"
                             Icon={MailIcon}
                           />
                         </div>

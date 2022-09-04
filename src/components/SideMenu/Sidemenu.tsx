@@ -24,7 +24,7 @@ const Sidemenu = ({ toggleMenu, isOpen }: IProps) => {
       >
         <div
           id="menu-container"
-          className={`mt-8 md:mt-0 w-full scrollbar-hide overflow-y-auto p-3 px-2`}
+          className={`mt-8 md:mt-0 w-full  p-3 px-2`}
         >
           {!isMobile && <Header toggleMenu={toggleMenu} />}
           <SearchBar />

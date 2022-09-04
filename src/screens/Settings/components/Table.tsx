@@ -106,7 +106,7 @@ const Table = () => {
             <th className="p-3 text-start w-auto md:w-5/12">
               <div className="flex items-center space-x-2">
                 <input
-                  className="rounded border-gray-300 checked:bg-purpleText"
+                  className="rounded border-gray-300 checked:bg-purpleText focus:ring-0"
                   type={"checkbox"}
                 />
                 <p className=" text-xs text-greyText font-normal">Invoice</p>
@@ -136,7 +136,7 @@ const Table = () => {
               <td className="p-3 py-4 text-start text-sm text-blackText font-normal w-auto md:w-5/12">
                 <div className="flex space-x-2 items-center">
                   <input
-                    className="rounded border-gray-300 checked:bg-purpleText"
+                    className="rounded border-gray-300 checked:bg-purpleText indeterminate:bg-purpleText focus:ring-0"
                     type={"checkbox"}
                   />
                   <p>{item.invoice}</p>

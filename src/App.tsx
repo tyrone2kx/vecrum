@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Sidemenu from "./components/SideMenu/Sidemenu";
@@ -7,10 +7,16 @@ import Header from "./components/SideMenu/components/Header";
 import { useIsMobile } from "./hooks/useIsMobile";
 
 function App() {
+  const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleMenu = () => setIsOpen(!isOpen)
 
-  const isMobile = useIsMobile();
+  useEffect(() => {
+    if (!isMobile) {
+      setIsOpen(false)
+    }
+  }, [isMobile])
+
 
   return (
     <>
